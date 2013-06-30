@@ -1,7 +1,7 @@
 -- Read the weapon_real_base if you really want to know what each action does
 
 if (SERVER) then
-  AddCSLuaFile("shared.lua")
+	AddCSLuaFile("shared.lua")
 end
 
 if (CLIENT) then
@@ -80,8 +80,7 @@ end
 SWEP.Kind = WEAPON_PISTOL
 
 -- If AutoSpawnable is true and SWEP.Kind is not WEAPON_EQUIP1/2, then this gun can
--- be spawned as a random weapon. Of course this AK is special equipment so it won't,
--- but for the sake of example this is explicitly set to false anyway.
+-- be spawned as a random weapon.
 SWEP.AutoSpawnable = true
 
 -- The AmmoEnt is the ammo entity that can be picked up when carrying this gun.
