@@ -1,0 +1,30 @@
+--Models
+resource.AddFile("models/weapons/w_pist_ct1911.mdl")
+resource.AddFile("models/weapons/v_pist_ct1911.mdl")
+
+--Materials
+resource.AddFile("materials/models/weapons/w_models/FAGGOT LONG COLT/Strap.vmt")
+resource.AddFile("materials/models/weapons/w_models/FAGGOT LONG COLT/Slide.vmt")
+resource.AddFile("materials/models/weapons/w_models/FAGGOT LONG COLT/Sights.vmt")
+resource.AddFile("materials/models/weapons/w_models/FAGGOT LONG COLT/Mag.vmt")
+resource.AddFile("materials/models/weapons/w_models/FAGGOT LONG COLT/Frame.vmt")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Strap.vmt")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Strap-r.vtf")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Strap.vtf")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Slide.vmt")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Slide-r.VTF")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Slide.vtf")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Sights.vmt")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Sights-r.vtf")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Sights.vtf")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Mag.vmt")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Mag-r.vtf")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Mag.vtf")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Frame.vmt")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Frame-r.vtf")
+resource.AddFile("materials/models/weapons/v_models/HK1911A1/Frame.vtf")
+
+--sound
+resource.AddFile("sounds/weapons/mk22/usp_unsil-1.wav")
+resource.AddFile("sounds/weapons/m1911/rel3.wav")
+resource.AddFile("sounds/weapons/m1911/pull.wav")
