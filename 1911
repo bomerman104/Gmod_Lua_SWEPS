@@ -1,0 +1,114 @@
+-- Read the weapon_real_base if you really want to know what each action does
+
+if (SERVER) then
+  AddCSLuaFile("shared.lua")
+end
+
+if (CLIENT) then
+	SWEP.PrintName = "1911"
+	SWEP.Slot      = 1 -- add 1 to get the slot number key
+
+	SWEP.ViewModelFOV  = 72
+	SWEP.ViewModelFlip = true
+end
+
+SWEP.Base 			= "weapon_tttbase"
+
+
+SWEP.ViewModel				= "models/weapons/v_pist_ct1911.mdl"
+SWEP.WorldModel				= "models/weapons/w_pist_ct1911.mdl"
+SWEP.Primary.Sound 		= Sound("weapons/mk22/usp_unsil-1.wav")
+SWEP.Primary.Damage 		= 25
+SWEP.Primary.Recoil 		= 4
+SWEP.Primary.NumShots 		= 1
+SWEP.Primary.Cone 		= 0.025
+SWEP.Primary.ClipSize 		= 8
+SWEP.Primary.Delay 		= 0.09
+SWEP.Primary.DefaultClip 	= 8
+SWEP.Primary.Automatic 		= false
+SWEP.Primary.Ammo 		= "pistol"
+
+SWEP.data 				= {}
+SWEP.mode 				= "semi"
+
+
+SWEP.data.semi 			= {}
+
+SWEP.data.auto 			= {}
+
+
+SWEP.IronSightsPos = Vector (1.7587, 0, 1.2551)
+SWEP.IronSightsAng = Vector (1.075, 0.0003, 0)
+
+
+
+function SWEP:Reload()
+
+	self.Weapon:DefaultReload(ACT_VM_RELOAD) 
+	-- Animation when you're reloading
+
+	if ( self.Weapon:Clip1() < self.Primary.ClipSize ) and self.Owner:GetAmmoCount(self.Primary.Ammo) > 0 then
+	-- When the current clip < full clip and the rest of your ammo > 0, then
+
+		self.Owner:SetFOV( 0, 0.15 )
+		-- Zoom = 0
+
+		self:SetIronsights(false)
+		-- Set the ironsight to false
+self.Weapon:EmitSound("weapons/m1911/rel3.wav")
+end
+	
+end
+
+
+function SWEP:Deploy()
+
+	self.Weapon:SendWeaponAnim( ACT_VM_DRAW )
+	
+self.Weapon:EmitSound("weapons/m1911/pull.wav")
+	self.Reloadaftershoot = CurTime() + 1
+	self.Weapon:SetNextPrimaryFire(CurTime() + 1)
+
+	return true
+end
+
+--- TTT config values
+
+-- Kind specifies the category this weapon is in. Players can only carry one of
+-- each. Can be: WEAPON_... MELEE, PISTOL, HEAVY, NADE, CARRY, EQUIP1, EQUIP2 or ROLE.
+-- Matching SWEP.Slot values: 0      1       2     3      4      6       7        8
+SWEP.Kind = WEAPON_PISTOL
+
+-- If AutoSpawnable is true and SWEP.Kind is not WEAPON_EQUIP1/2, then this gun can
+-- be spawned as a random weapon. Of course this AK is special equipment so it won't,
+-- but for the sake of example this is explicitly set to false anyway.
+SWEP.AutoSpawnable = true
+
+-- The AmmoEnt is the ammo entity that can be picked up when carrying this gun.
+SWEP.AmmoEnt = "item_ammo_pistol_ttt"
+
+-- CanBuy is a table of ROLE_* entries like ROLE_TRAITOR and ROLE_DETECTIVE. If
+-- a role is in this table, those players can buy this.
+SWEP.CanBuy = {  }
+
+-- InLoadoutFor is a table of ROLE_* entries that specifies which roles should
+-- receive this weapon as soon as the round starts. In this case, none.
+SWEP.InLoadoutFor = nil
+
+-- If LimitedStock is true, you can only buy one per round.
+SWEP.LimitedStock = true
+
+-- If AllowDrop is false, players can't manually drop the gun with Q
+SWEP.AllowDrop = true
+
+-- If IsSilent is true, victims will not scream upon death.
+SWEP.IsSilent = false
+
+-- If NoSights is true, the weapon won't have ironsights
+SWEP.NoSights = false
+
+-- weapon hold type
+SWEP.HoldType = "pistol"
+function SWEP:Initialize()
+	self:SetWeaponHoldType( self.HoldType )
+end
