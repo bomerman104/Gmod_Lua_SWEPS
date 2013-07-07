@@ -1,0 +1,35 @@
+<html><head>
+  	<title>=DNP= loading screen</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/background.js"></script>
+		<div style='position:absolute;z-index:0;left:0;top:0;width:100%;height:100%'>
+  <img src='http://farm4.staticflickr.com/3747/8920933951_1362f12566_c.jpg' style='width:100%;height:100%' alt='[]' />
+</div><div align="center" "="">
+
+<div style='position: relative; bottom: 0; right: 0; bottom: 0; left: 0; width: 10%; height: 0%; margin: auto; overflow: visible;'>
+    <div id='loadingtext' style='margin-bottom: 1px; color: #B5B5B5; font-family: Arial; font-size: 12px; font-weight: bold;'>Loading Text..</div>
+    </div>
+</center>
+    <script type="text/javascript">
+
+   keywords = 
+   [
+    "Loading Screen Made By =DNP= Bomerman104"
+	"Buttering Toast"
+   ]
+
+   var bCanChangeStatus = true;
+   function ChangeText ( )   {
+      if ( bCanChangeStatus )
+      {
+         var keyword = keywords[ Math.floor( Math.random() * keywords.length ) ]
+         document.getElementById( "loadingtext" ).innerHTML = keyword;
+      }
+      
+      setTimeout( "ChangeText()", 3500 );
+   }
+   
+   ChangeText();
+   
+   RefreshFileBox();
+</script>
