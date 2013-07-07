@@ -6,17 +6,22 @@
   <img src='http://farm4.staticflickr.com/3747/8920933951_1362f12566_c.jpg' style='width:100%;height:100%' alt='[]' />
 </div><div align="center" "="">
 
-<div style='position: relative; bottom: 0; right: 0; bottom: 0; left: 0; width: 10%; height: 0%; margin: auto; overflow: visible;'>
-    <div id='loadingtext' style='margin-bottom: 1px; color: #B5B5B5; font-family: Arial; font-size: 12px; font-weight: bold;'>Loading Text..</div>
+
+<div style='position: relative; bottom: 0; right: 0; bottom: 0; left: 0; width: 20%; height: 0%; margin: auto; overflow: visible;'>
+    <div id='loadingtext' style='margin-bottom: 1px; color: #B5B5B5; font-family: Arial; font-size: 24px; font-weight: bold;'>Loading Text..</div>
     </div>
 </center>
     <script type="text/javascript">
 
    keywords = 
    [
-    "Loading Screen Made By =DNP= Bomerman104",
+    "HTML Made By =DNP= Bomerman104",
 	"buttering toast",
 	"placing C4",
+	"deleting your system32",
+	"fucking your girlfriend",
+	"stealing your credit card info",
+	"dicking your niples",
    ]
 
    var bCanChangeStatus = true;
