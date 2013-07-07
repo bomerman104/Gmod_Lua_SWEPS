@@ -1,5 +1,5 @@
 <html><head>
-  	<title>=DNP= loading screen</title>
+		<title>=DNP= loading screen</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script type="text/javascript" src="js/background.js"></script>
 		<div style='position:absolute;z-index:0;left:0;top:0;width:100%;height:100%'>
@@ -14,8 +14,9 @@
 
    keywords = 
    [
-    "Loading Screen Made By =DNP= Bomerman104"
-	"Buttering Toast"
+    "Loading Screen Made By =DNP= Bomerman104",
+	"buttering toast",
+	"placing C4",
    ]
 
    var bCanChangeStatus = true;
@@ -26,7 +27,7 @@
          document.getElementById( "loadingtext" ).innerHTML = keyword;
       }
       
-      setTimeout( "ChangeText()", 3500 );
+      setTimeout( "ChangeText()", 2000 );
    }
    
    ChangeText();
